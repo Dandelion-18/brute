@@ -2,8 +2,8 @@ FROM kalilinux/kali-rolling
 
 LABEL org.label-schema.name = 'Brute - Kali Linux' \
     org.label-schema.description = 'Automatically brute force all services running on a target. ' \
-    org.label-schema.usage = 'https://github.com/Dandelion-18/Brute' \
-    org.label-schema.url = 'https://github.com/Dandelion-18/Brute' \
+    org.label-schema.usage = 'https://github.com/Dandelion-18/brute' \
+    org.label-schema.url = 'https://github.com/Dandelion-18/brute' \
     org.label-schema.schema-version = '1.0' \
     org.label-schema.docker.cmd.devel = 'docker run --rm -ti dandelion/brute' \
     MAINTAINER = "@dandelion"
@@ -20,7 +20,7 @@ RUN set -x \
 
 RUN apt-get --yes install git \
     && cd /tmp \
-    && git clone https://github.com/Dandelion-18/Brute.git \
+    && git clone https://github.com/Dandelion-18/brute.git \
     && cd Brute \
     && ./install.sh \
     && brute
