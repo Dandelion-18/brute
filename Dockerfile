@@ -14,15 +14,23 @@ RUN echo "deb http://http.kali.org/kali kali-rolling main contrib non-free" > /e
 ENV DEBIAN_FRONTEND noninteractive
 
 RUN set -x \
-    && apt-get -yqq update \
-    && apt-get -yqq dist-upgrade \
+    && apt-get -yqq update
+
+RUN set -x \
+    && apt-get -yqq dist-upgrade
+
+RUN set -x \
     && apt-get clean
 
-RUN apt-get --yes install git \
+RUN set -x \
+    && apt-get --yes install git
+
+RUN set -x \
     && cd /tmp \
-    && git clone https://github.com/Dandelion-18/brute.git \
-    && cd brute \
-    && ./install.sh \
-    && apt-get clean
+    && git clone https://github.com/Dandelion-18/brute.git
+
+RUN set -x \
+    && cd /tmp/brute \
+    && ./install.sh
 
 CMD ["brute"]
