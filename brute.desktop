@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=brute
+Encoding=UTF-8
+Exec=/usr/shre/kali-menu/exec-in-shell "sudo brute"
+Icon=avatar-default
+StartupNotify=false
+Terminal=true
+Type=Application
+Categories=05-password-attacks;
+X-Kali-Package=brute
+Comment=
+Path=
