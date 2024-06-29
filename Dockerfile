@@ -20,7 +20,7 @@ RUN set -x \
 
 RUN apt-get --yes install git \
     && cd /tmp \
-    && git clone https://github.com/Dandelion-18/brute \
+    && git clone https://github.com/Dandelion-18/brute.github/workflows \
     && cd Brute \
     && ./install.sh \
     && brute
