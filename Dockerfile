@@ -20,7 +20,7 @@ RUN set -x \
 
 RUN apt-get --yes install git \
     && cd /tmp \
-    && git clone https://github.com/Dandelion-18/brute.github/workflows \
+    && git clone https://github.com/Dandelion-18/brute/blob/main/.github/workflows/docker-publish.yml\
     && cd Brute \
     && ./install.sh \
     && brute
