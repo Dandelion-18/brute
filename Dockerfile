@@ -20,9 +20,8 @@ RUN set -x && \
 
 RUN apt-get --yes install git && \
     cd /tmp && \
-    git clone https://github.com/Dandelion-18/brute.git && \
+    git clone https://github.com/Dandelion-18/brute.git || { echo "Git clone failed"; exit 1; } && \
     cd brute && \
-    ./install.sh && \
-    brute
+    ./install.sh || { echo "Install script failed"; exit 1; }
 
 CMD ["brute"]
