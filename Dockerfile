@@ -21,9 +21,8 @@ RUN set -x && \
 RUN apt-get --yes install git && \
     cd /tmp && \
     git clone https://github.com/Dandelion-18/brute.git && \
-    ls -la /tmp && \
     cd brute && \
-    ls -la && \
+    chmod +x install.sh && \
     ./install.sh
 
 CMD ["brute"]
